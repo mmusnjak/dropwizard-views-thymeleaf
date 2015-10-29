@@ -20,8 +20,8 @@ public class ExampleApplication extends Application<ExampleConfiguration> {
 	
 	@Override
 	public void initialize(Bootstrap<ExampleConfiguration> bootstrap) {
-		ImmutableSet<ViewRenderer> renderes= ImmutableSet.of((ViewRenderer)new ThymeleafViewRenderer());
-		bootstrap.addBundle(new ViewBundle(renderes));
+		ImmutableSet<ViewRenderer> renderers = ImmutableSet.of((ViewRenderer)new ThymeleafViewRenderer());
+		bootstrap.addBundle(new ViewBundle(renderers));
 		
 	}
 

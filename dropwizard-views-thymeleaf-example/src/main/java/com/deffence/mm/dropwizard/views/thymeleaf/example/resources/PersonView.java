@@ -6,8 +6,8 @@ import com.deffence.mm.dropwizard.thymeleaf.ThymeleafView;
 
 public class PersonView extends ThymeleafView {
 
-	private Person person;
-	private List<Person> persons;
+	final private Person person;
+	final private List<Person> persons;
 	
 	
 	protected PersonView(String templateName,Person p ,List<Person> pList) {

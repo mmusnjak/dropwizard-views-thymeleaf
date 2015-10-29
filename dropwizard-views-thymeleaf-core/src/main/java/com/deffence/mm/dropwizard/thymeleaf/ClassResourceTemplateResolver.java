@@ -4,12 +4,13 @@ import org.thymeleaf.exceptions.ConfigurationException;
 import org.thymeleaf.resourceresolver.IResourceResolver;
 import org.thymeleaf.templateresolver.TemplateResolver;
 
+
+// TODO: Check why we're not using org.thymeleaf.templateresolver.ClassLoaderTemplateResolver
 public class ClassResourceTemplateResolver extends TemplateResolver {
 	
 	public ClassResourceTemplateResolver() {
 		super.setResourceResolver(new ClassResourceResolver());
 	}
-
 
 	@Override
 	public void setResourceResolver(IResourceResolver resourceResolver) {

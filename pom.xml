@@ -9,7 +9,7 @@
 
 	<name>Dropwizard Thymeleaf Integration</name>
 	<packaging>pom</packaging>
-	<description>Dropwizard Thymeleaf Integration provide render Thymeleaf template.</description>
+	<description>Dropwizard Thymeleaf Integration providing rendering of Thymeleaf templates.</description>
 	<modules>
 		<module>dropwizard-views-thymeleaf-core</module>
 		<module>dropwizard-views-thymeleaf-example</module>
@@ -18,15 +18,16 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<dropwizard.version>0.7.0</dropwizard.version>
-		<thymeleaf.version>2.1.2.RELEASE</thymeleaf.version>
-		<jersey.version>1.18.1</jersey.version>
+		<dropwizard.version>0.8.4</dropwizard.version>
+		<thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
+		<jersey.version>1.19</jersey.version>
+        <junit.version>4.12</junit.version>
 	</properties>
 
 	<developers>
 		<developer>
-			<name>Masatsugu Matsushita</name>
-			<email>deffence1776@gmail.com</email>
+			<name>Marko Musnjak</name>
+			<email>marko.musnjak@gmail.com</email>
 			<timezone>+1</timezone>
 		</developer>
 	</developers>
@@ -34,7 +35,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -45,8 +46,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 		</plugins>

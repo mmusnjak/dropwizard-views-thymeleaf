@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.Locale;
+import java.util.Map;
 
 import javax.ws.rs.WebApplicationException;
 
@@ -30,8 +31,7 @@ public class ThymeleafViewRenderer implements ViewRenderer {
 	}
 
 	public ThymeleafViewRenderer(String templateMode, String prefix,
-			String suffix, long cacheTTLMs,boolean cacheable) {
-		super();
+			String suffix, long cacheTTLMs, boolean cacheable) {
 
 		this.suffix = suffix;
 		
@@ -42,7 +42,6 @@ public class ThymeleafViewRenderer implements ViewRenderer {
 		templateResolver.setCacheable(cacheable);
 		engine = new TemplateEngine();
 		engine.setTemplateResolver(templateResolver);
-
 	}
 
 	@Override
@@ -62,4 +61,13 @@ public class ThymeleafViewRenderer implements ViewRenderer {
 
 	}
 
+	@Override
+	public void configure(Map<String, String> options) {
+
+	}
+
+    @Override
+    public String getSuffix() {
+        return suffix;
+    }
 }

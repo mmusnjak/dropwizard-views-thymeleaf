@@ -1,7 +1,7 @@
 dropwizard-views-thymeleaf
 ==========================
 
-Dropwizard のテンプレートエンジンとして、Thymeleaf Viewsを利用する
+Dropwizard Thymeleaf Views
 
 #What is Thymeleaf
 http://www.thymeleaf.org/
@@ -99,7 +99,7 @@ public class ExampleResource {
 
 default location:
 classpath:/templates/something.html<br/>
-    [/template/] is libraly default prefix. you can change default prefix by  ThymeleafViewRenderer's constructor. 
+    [/template/] is the default template library prefix. You can change the default prefix by specifying an alternative in ThymeleafViewRenderer's constructor.
 
 template example:
 

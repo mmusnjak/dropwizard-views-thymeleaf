@@ -17,13 +17,7 @@ import org.thymeleaf.context.WebContextExecutionInfo;
 
 public class DropWizardContext extends AbstractContext {
 
-	public DropWizardContext() {
-		super();
-
-	}
-
 	public DropWizardContext(View view) {
-		super();
 		checkNotNull(view, "view can not be null.");
 
 		try {
@@ -44,15 +38,12 @@ public class DropWizardContext extends AbstractContext {
 				view.getClass(), View.class).getPropertyDescriptors();
 
 		for (PropertyDescriptor desc : propertyDescs) {
-
-			String propName = desc.getDisplayName();
+            String propName = desc.getDisplayName();
 			Method method = desc.getReadMethod();
-			
-			setVariable(propName, method.invoke(view, new Object[0]));
 
-		}
-
-	}
+			setVariable(propName, method.invoke(view, (Object)null));
+        }
+    }
 
 	@Override
 	protected IContextExecutionInfo buildContextExecutionInfo(

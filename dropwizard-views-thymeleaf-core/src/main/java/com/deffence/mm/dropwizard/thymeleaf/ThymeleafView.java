@@ -23,12 +23,10 @@ public abstract class ThymeleafView extends View {
 
 	@Override
 	public String getTemplateName() {
-		
 		if(null == simpleTemplateName){
 			simpleTemplateName = convertToSimpleTemplateName(super.getTemplateName());
 		}
 		return simpleTemplateName;
-		
 	}
 
 	private String convertToSimpleTemplateName(String templateName) {

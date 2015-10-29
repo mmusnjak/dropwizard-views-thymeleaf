@@ -7,7 +7,6 @@ public class Person {
 	
 	
 	protected Person(String name, int age) {
-		super();
 		this.name = name;
 		this.age = age;
 	}

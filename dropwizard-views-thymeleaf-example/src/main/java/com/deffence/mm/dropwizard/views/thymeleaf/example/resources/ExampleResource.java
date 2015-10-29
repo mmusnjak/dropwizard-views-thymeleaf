@@ -14,11 +14,11 @@ public class ExampleResource {
 	public PersonView getPersons(){
 		
 		List<Person> pList = Lists.newArrayList();
-		pList.add(new Person("list1",10));
-		pList.add(new Person("list2",10));
+		pList.add(new Person("persons:1",11));
+		pList.add(new Person("persons:2",12));
 		
 		
-		return new PersonView("person.html" ,new Person("name",10), pList);
+		return new PersonView("person.html" ,new Person("person",9), pList);
 	}
 	
 }
