@@ -12,6 +12,12 @@ public class ClassResourceResolver implements IResourceResolver {
 		return "ClassResourceResolver";
 	}
 
+	/**
+	 * Reads a template resource from a location inside the webapp jar.
+	 * @param templateProcessingParameters
+	 * @param resourceName
+	 * @return InputStream for the requested resource.
+	 */
 	@Override
 	public InputStream getResourceAsStream(
 			TemplateProcessingParameters templateProcessingParameters,

@@ -18,7 +18,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<dropwizard.version>0.8.4</dropwizard.version>
+		<dropwizard.version>0.9.0</dropwizard.version>
 		<thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
 		<jersey.version>1.19</jersey.version>
         <junit.version>4.12</junit.version>

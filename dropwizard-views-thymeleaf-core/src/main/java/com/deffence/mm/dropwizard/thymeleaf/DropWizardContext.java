@@ -25,11 +25,20 @@ public class DropWizardContext extends AbstractContext {
 		} catch (IllegalAccessException | IllegalArgumentException
 				| InvocationTargetException | IntrospectionException e) {
 			checkArgument(false,
-					"failure to create DropwizardContext.view setting is wrong.");
+					"Failure to create DropwizardContext. Exception while extracting property info from view object.");
 		}
 
 	}
 
+    /**
+     * Collects all the properties present in the view parameter using reflection, and adds them to the
+     * map to be used as the request context.
+     * @param view The view object to be rendered.
+     * @throws IntrospectionException
+     * @throws IllegalAccessException
+     * @throws IllegalArgumentException
+     * @throws InvocationTargetException
+     */
 	private void initVariableFromViewProperties(View view)
 			throws IntrospectionException, IllegalAccessException,
 			IllegalArgumentException, InvocationTargetException {
